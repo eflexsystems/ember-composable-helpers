@@ -1,6 +1,5 @@
 import { get } from '@ember/object';
 import { isEmpty } from '@ember/utils';
-import { helper } from '@ember/component/helper';
 import asArray from '../utils/as-array';
 
 const collator = new Intl.Collator(undefined, {
