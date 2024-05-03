@@ -119,10 +119,8 @@ const performSort = (array, keys = []) => {
 };
 
 export function sortBy(...params) {
-  // slice params to avoid mutating the provided params
-  const sortParams = params.slice();
-  const array = asArray(sortParams.pop());
-  let sortKeys = sortParams;
+  const array = asArray(params.pop());
+  let sortKeys = params;
 
   if (!array || !sortKeys || sortKeys.length === 0) {
     return [];

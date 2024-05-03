@@ -1,7 +1,5 @@
-import { helper } from '@ember/component/helper';
-
-export function withDefault([val, defaultVal]) {
+export function withDefault(val, defaultVal) {
   return val ?? defaultVal;
 }
 
-export default helper(withDefault);
+export default withDefault;

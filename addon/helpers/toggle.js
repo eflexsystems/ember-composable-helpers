@@ -1,6 +1,4 @@
-import { helper } from '@ember/component/helper';
-import { get } from '@ember/object';
-import { set } from '@ember/object';
+import { set, get } from '@ember/object';
 import { isPresent } from '@ember/utils';
 
 function nextIndex(length, currentIdx) {
@@ -11,7 +9,7 @@ function nextIndex(length, currentIdx) {
   return currentIdx + 1;
 }
 
-export function toggle([prop, obj, ...values]) {
+export function toggle(prop, obj, ...values) {
   return function () {
     let currentValue = get(obj, prop);
 
@@ -26,4 +24,4 @@ export function toggle([prop, obj, ...values]) {
   };
 }
 
-export default helper(toggle);
+export default toggle;
