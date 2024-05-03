@@ -31,7 +31,7 @@ module('Integration | Helper | {{dec}}', function (hooks) {
   });
 
   test('It handles when undefined is passed', async function (assert) {
-    await render(hbs`{{dec}}`);
+    await render(hbs`{{(dec)}}`);
 
     assert.dom().hasText('', 'should not return a value');
   });
