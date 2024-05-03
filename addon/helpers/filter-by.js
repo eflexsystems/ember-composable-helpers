@@ -1,10 +1,9 @@
-import { helper } from '@ember/component/helper';
 import { isEmpty, isPresent } from '@ember/utils';
 import { get } from '@ember/object';
 import isEqual from '../utils/is-equal';
 import asArray from '../utils/as-array';
 
-export function filterBy([byPath, value, array]) {
+export function filterBy(byPath, value, array) {
   if (!Array.isArray(array) && Array.isArray(value)) {
     array = value;
     value = undefined;
@@ -31,4 +30,4 @@ export function filterBy([byPath, value, array]) {
   return array.filter(filterFn);
 }
 
-export default helper(filterBy);
+export default filterBy;

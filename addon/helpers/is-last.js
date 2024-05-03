@@ -1,6 +1,4 @@
-import { helper } from '@ember/component/helper';
-
-export function isLast([checked, array]) {
+export function isLast(checked, array) {
   if (array == null || checked == null) {
     return false;
   }
@@ -8,4 +6,4 @@ export function isLast([checked, array]) {
   return array.at(-1) === checked;
 }
 
-export default helper(isLast);
+export default isLast;

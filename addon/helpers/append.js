@@ -1,7 +1,5 @@
-import { helper } from '@ember/component/helper';
-
-export function append([...arrays]) {
-  return [].concat(...arrays);
+export function append() {
+  return [].concat(...arguments);
 }
 
-export default helper(append);
+export default append;

@@ -1,8 +1,7 @@
-import { helper } from '@ember/component/helper';
 import { get } from '@ember/object';
 import asArray from '../utils/as-array';
 
-export function groupBy([byPath, array]) {
+export function groupBy(byPath, array) {
   let groups = {};
 
   asArray(array).forEach((item) => {
@@ -20,4 +19,4 @@ export function groupBy([byPath, array]) {
   return groups;
 }
 
-export default helper(groupBy);
+export default groupBy;

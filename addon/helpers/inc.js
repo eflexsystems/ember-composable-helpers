@@ -1,7 +1,6 @@
-import { helper } from '@ember/component/helper';
 import { isEmpty } from '@ember/utils';
 
-export function inc([step, val]) {
+export function inc(step, val) {
   if (isEmpty(val)) {
     val = step;
     step = undefined;
@@ -20,4 +19,4 @@ export function inc([step, val]) {
   return val + step;
 }
 
-export default helper(inc);
+export default inc;

@@ -4,7 +4,7 @@ import { module, test } from 'qunit';
 module('Unit | Helper | repeat', function () {
   test('it repeats `n` times', function (assert) {
     let expectedResult = [undefined, undefined, undefined];
-    let result = repeat([3]);
+    let result = repeat(3);
 
     assert.deepEqual(
       result,
@@ -15,7 +15,7 @@ module('Unit | Helper | repeat', function () {
 
   test('it repeats `n` times with a value', function (assert) {
     let expectedResult = ['foo', 'foo', 'foo'];
-    let result = repeat([3, 'foo']);
+    let result = repeat(3, 'foo');
 
     assert.deepEqual(
       result,
@@ -26,7 +26,7 @@ module('Unit | Helper | repeat', function () {
 
   test('it handles non-number length', function (assert) {
     let expectedResult = [undefined];
-    let result = repeat(['foo']);
+    let result = repeat('foo');
 
     assert.deepEqual(
       result,

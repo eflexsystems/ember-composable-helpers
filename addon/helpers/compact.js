@@ -1,7 +1,6 @@
-import { helper } from '@ember/component/helper';
 import { isPresent } from '@ember/utils';
 
-export function compact([value]) {
+export function compact(value) {
   let array;
   if (Array.isArray(value)) {
     array = value;
@@ -12,4 +11,4 @@ export function compact([value]) {
   return array.filter((item) => isPresent(item));
 }
 
-export default helper(compact);
+export default compact;

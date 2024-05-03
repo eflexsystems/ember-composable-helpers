@@ -1,6 +1,4 @@
-import { helper } from '@ember/component/helper';
-
-export function optional([action]) {
+export function optional(action) {
   if (typeof action === 'function') {
     return action;
   }
@@ -8,4 +6,4 @@ export function optional([action]) {
   return (i) => i;
 }
 
-export default helper(optional);
+export default optional;

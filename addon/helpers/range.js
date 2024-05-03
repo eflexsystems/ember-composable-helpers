@@ -1,8 +1,7 @@
-import { helper } from '@ember/component/helper';
 import { typeOf } from '@ember/utils';
 import { gte, lte, gt, lt } from '../utils/comparison';
 
-export function range([min, max, isInclusive]) {
+export function range(min, max, isInclusive) {
   isInclusive = typeOf(isInclusive) === 'boolean' ? isInclusive : false;
   let numbers = [];
 
@@ -27,4 +26,4 @@ export function range([min, max, isInclusive]) {
   return numbers;
 }
 
-export default helper(range);
+export default range;

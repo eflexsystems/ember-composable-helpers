@@ -10,7 +10,7 @@ module('Unit | Helper | invoke', function () {
         return `calling mom in ${[...arguments]}`;
       },
     };
-    let action = invoke(['callMom', 1, 2, 3, object]);
+    let action = invoke('callMom', 1, 2, 3, object);
 
     assert.strictEqual(action(), 'calling mom in 1,2,3', 'it calls functions');
   });
@@ -23,7 +23,7 @@ module('Unit | Helper | invoke', function () {
       },
     };
 
-    let action = invoke(['func', object]);
+    let action = invoke('func', object);
     let result = action();
 
     result.then((resolved) => {
@@ -51,7 +51,7 @@ module('Unit | Helper | invoke', function () {
       },
     });
 
-    let action = invoke(['func', array]);
+    let action = invoke('func', array);
     let result = action();
 
     const resolved = await result;
