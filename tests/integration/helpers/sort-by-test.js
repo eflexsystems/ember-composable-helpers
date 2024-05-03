@@ -116,7 +116,7 @@ module('Integration | Helper | {{sort-by}}', function (hooks) {
   test('It sorts by a value desc', async function (assert) {
     this.set(
       'array',
-      tracked([{ name: 'c' }, { name: 'a' }, { name: 'b' }, { name: 'a' }])
+      tracked([{ name: 'c' }, { name: 'a' }, { name: 'b' }, { name: 'a' }]),
     );
 
     await render(hbs`
@@ -180,7 +180,7 @@ module('Integration | Helper | {{sort-by}}', function (hooks) {
         { firstName: 'William', lastName: 'Abrams' },
         { firstName: 'Sam', lastName: 'Jones' },
         { firstName: 'Donnie', lastName: 'Brady' },
-      ])
+      ]),
     );
 
     this.set('sortBy', ['lastName', 'firstName']);
@@ -195,7 +195,7 @@ module('Integration | Helper | {{sort-by}}', function (hooks) {
       .dom()
       .hasText(
         'Abrams,William;Brady,Donnie;Coda,Adam;Jones,Billy;Jones,Sam;',
-        'Names are sorted alphabetically by last name then first name'
+        'Names are sorted alphabetically by last name then first name',
       );
   });
 
@@ -208,7 +208,7 @@ module('Integration | Helper | {{sort-by}}', function (hooks) {
         { firstName: 'William', lastName: 'Abrams' },
         { firstName: 'Sam', lastName: 'Jones' },
         { firstName: 'Donnie', lastName: 'Brady' },
-      ])
+      ]),
     );
 
     await render(hbs`
@@ -221,7 +221,7 @@ module('Integration | Helper | {{sort-by}}', function (hooks) {
       .dom()
       .hasText(
         'Abrams,William;Brady,Donnie;Coda,Adam;Jones,Billy;Jones,Sam;',
-        'Names are sorted alphabetically by last name then first name'
+        'Names are sorted alphabetically by last name then first name',
       );
   });
 
@@ -269,7 +269,7 @@ module('Integration | Helper | {{sort-by}}', function (hooks) {
     pets.push(
       store.createRecord('pet', { name: 'c' }),
       store.createRecord('pet', { name: 'b' }),
-      store.createRecord('pet', { name: 'a' })
+      store.createRecord('pet', { name: 'a' }),
     );
 
     this.set('pets', pets);

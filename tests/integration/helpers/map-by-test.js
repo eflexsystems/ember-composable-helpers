@@ -110,7 +110,7 @@ module('Integration | Helper | {{map-by}}', function (hooks) {
     pets.push(
       store.createRecord('pet', { name: 'a' }),
       store.createRecord('pet', { name: 'b' }),
-      store.createRecord('pet', { name: 'c' })
+      store.createRecord('pet', { name: 'c' }),
     );
 
     this.set('pets', pets);

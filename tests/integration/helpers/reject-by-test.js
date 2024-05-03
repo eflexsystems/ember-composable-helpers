@@ -15,7 +15,7 @@ module('Integration | Helper | {{reject-by}}', function (hooks) {
         { foo: false, name: 'a' },
         { foo: true, name: 'b' },
         { foo: false, name: 'c' },
-      ])
+      ]),
     );
 
     await render(hbs`
@@ -41,7 +41,7 @@ module('Integration | Helper | {{reject-by}}', function (hooks) {
         { foo: '', name: 'h' },
         { foo: NaN, name: 'i' },
         { foo: [], name: 'j' },
-      ])
+      ]),
     );
 
     await render(hbs`
@@ -105,7 +105,7 @@ module('Integration | Helper | {{reject-by}}', function (hooks) {
         { foo: 1, name: 'a' },
         { foo: 2, name: 'b' },
         { foo: 3, name: 'c' },
-      ])
+      ]),
     );
 
     this.isEven = (value) => value % 2 === 0;
@@ -132,7 +132,7 @@ module('Integration | Helper | {{reject-by}}', function (hooks) {
         { foo: 1, name: 'a' },
         { foo: 2, name: 'b' },
         { foo: 3, name: 'c' },
-      ])
+      ]),
     );
 
     await render(hbs`

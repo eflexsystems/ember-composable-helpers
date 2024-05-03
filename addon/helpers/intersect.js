@@ -1,7 +1,6 @@
-import { helper } from '@ember/component/helper';
 import asArray from '../utils/as-array';
 
-export function intersect([...arrays]) {
+export function intersect(...arrays) {
   const confirmedArrays = asArray(arrays).map((array) => {
     return Array.isArray(array) ? array : [];
   });
@@ -17,4 +16,4 @@ export function intersect([...arrays]) {
   });
 }
 
-export default helper(intersect);
+export default intersect;

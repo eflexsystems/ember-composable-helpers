@@ -30,7 +30,7 @@ module('Unit | Helper | chunk', function () {
     assert.deepEqual(
       result,
       expectedResult,
-      'should return three chunked arrays'
+      'should return three chunked arrays',
     );
   });
 
@@ -57,12 +57,12 @@ module('Unit | Helper | chunk', function () {
     assert.deepEqual(
       result1,
       expectedResult1,
-      'should return array of chunked arrays'
+      'should return array of chunked arrays',
     );
     assert.deepEqual(
       result2,
       expectedResult2,
-      'should return array of chunked arrays'
+      'should return array of chunked arrays',
     );
   });
 });

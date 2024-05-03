@@ -1,7 +1,6 @@
-import { helper } from '@ember/component/helper';
 import { isEmpty } from '@ember/utils';
 
-export function dec([step, val]) {
+export function dec(step, val) {
   if (isEmpty(val)) {
     val = step;
     step = undefined;
@@ -20,4 +19,4 @@ export function dec([step, val]) {
   return val - step;
 }
 
-export default helper(dec);
+export default dec;

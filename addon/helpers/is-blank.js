@@ -1,8 +1,5 @@
-import { helper } from '@ember/component/helper';
 import { isBlank as emberIsBlank } from '@ember/utils';
 
-export function isBlank([value]) {
-  return emberIsBlank(value);
-}
+export const isBlank = emberIsBlank;
 
-export default helper(isBlank);
+export default isBlank;

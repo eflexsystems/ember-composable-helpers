@@ -1,4 +1,3 @@
-import { helper } from '@ember/component/helper';
 import isPromise from '../utils/is-promise';
 
 export function invokeFunction(acc, curr) {
@@ -9,7 +8,7 @@ export function invokeFunction(acc, curr) {
   return curr(acc);
 }
 
-export function pipe(actions = []) {
+export function pipe(...actions) {
   return function (...args) {
     return actions.reduce((acc, curr, idx) => {
       if (idx === 0) {
@@ -21,4 +20,4 @@ export function pipe(actions = []) {
   };
 }
 
-export default helper(pipe);
+export default pipe;

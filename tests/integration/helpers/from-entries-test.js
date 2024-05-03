@@ -13,7 +13,7 @@ module('Integration | Helper | from-entries', function (hooks) {
     ]);
 
     await render(
-      hbs`{{#each-in (from-entries this.inputValue) as |k v|}}{{k}}{{v}}{{/each-in}}`
+      hbs`{{#each-in (from-entries this.inputValue) as |k v|}}{{k}}{{v}}{{/each-in}}`,
     );
 
     assert.dom(this.element).hasText('a1b2');

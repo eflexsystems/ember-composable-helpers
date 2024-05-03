@@ -1,4 +1,4 @@
-export default function getValueArrayAndUseDeepEqualFromParams(params) {
+export default function getValueArrayAndUseDeepEqualFromParams(...params) {
   let currentValue = params[0];
 
   let array;

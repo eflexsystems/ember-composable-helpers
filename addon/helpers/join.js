@@ -1,7 +1,6 @@
-import { helper } from '@ember/component/helper';
 import asArray from '../utils/as-array';
 
-export function join([separator, rawArray]) {
+export function join(separator, rawArray) {
   let array = asArray(rawArray);
 
   if (Array.isArray(separator)) {
@@ -12,4 +11,4 @@ export function join([separator, rawArray]) {
   return array.join(separator);
 }
 
-export default helper(join);
+export default join;

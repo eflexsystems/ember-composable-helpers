@@ -1,4 +1,3 @@
-import { helper } from '@ember/component/helper';
 const { max, ceil } = Math;
 import asArray from '../utils/as-array';
 
@@ -28,6 +27,4 @@ export function chunk(num, array) {
   }
 }
 
-export default helper(function ([num, array]) {
-  return chunk(num, array);
-});
+export default chunk;

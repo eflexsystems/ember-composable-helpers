@@ -1,4 +1,3 @@
-import { helper } from '@ember/component/helper';
 import { isPresent } from '@ember/utils';
 import { next } from './next';
 import isEqual from '../utils/is-equal';
@@ -13,9 +12,9 @@ export function hasNext(currentValue, maybeArray, useDeepEqual = false) {
   return isNotSameValue && isPresent(nextValue);
 }
 
-export default helper(function (params) {
+export default function (...params) {
   let { currentValue, array, useDeepEqual } =
-    getValueArrayAndUseDeepEqualFromParams(params);
+    getValueArrayAndUseDeepEqualFromParams(...params);
 
   return hasNext(currentValue, array, useDeepEqual);
-});
+}

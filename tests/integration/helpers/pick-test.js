@@ -7,13 +7,11 @@ module('Integration | Helper | pick', function (hooks) {
   setupRenderingTest(hooks);
 
   test('Works when used with {{on}} modifier and pipe', async function (assert) {
-    assert.expect(1);
-
     this.set('onFocus', function (value) {
       assert.strictEqual(
         value,
         'pizza party',
-        'The action receives the correct value'
+        'The action receives the correct value',
       );
     });
 
@@ -29,13 +27,11 @@ module('Integration | Helper | pick', function (hooks) {
   });
 
   test('Shorthand works when used with {{on}} modifier and optional action is provided', async function (assert) {
-    assert.expect(1);
-
     this.set('onFocus', function (value) {
       assert.strictEqual(
         value,
         'pizza party',
-        'The action receives the correct value'
+        'The action receives the correct value',
       );
     });
 

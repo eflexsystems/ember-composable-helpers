@@ -1,4 +1,3 @@
-import { helper } from '@ember/component/helper';
 import { typeOf } from '@ember/utils';
 
 export function shuffle(array, randomizer) {
@@ -17,7 +16,7 @@ export function shuffle(array, randomizer) {
   return array;
 }
 
-export default helper(function ([randomizer, array]) {
+export default function (randomizer, array) {
   if (array === undefined) {
     array = randomizer;
     randomizer = undefined;
@@ -28,4 +27,4 @@ export default helper(function ([randomizer, array]) {
   }
 
   return shuffle(array, randomizer);
-});
+}

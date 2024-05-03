@@ -37,7 +37,6 @@ module('Unit | Utility | as-array', function () {
   });
 
   test('it not works for number', function (assert) {
-    assert.expect(1);
     try {
       asArray(1);
     } catch (e) {
@@ -46,7 +45,6 @@ module('Unit | Utility | as-array', function () {
   });
 
   test('it not works for non-iterable items', function (assert) {
-    assert.expect(1);
     try {
       asArray(Symbol('a'));
     } catch (e) {
@@ -55,19 +53,19 @@ module('Unit | Utility | as-array', function () {
   });
 
   test('it not works for proxy-like object as array', function (assert) {
-    assert.expect(1);
     try {
       const item = new Promise((r) => r());
       asArray(item);
     } catch (e) {
       assert.ok(
-        e.toString().includes('Promise-like objects is not supported as arrays')
+        e
+          .toString()
+          .includes('Promise-like objects is not supported as arrays'),
       );
     }
   });
 
   test('it not works for WeakMap as array', function (assert) {
-    assert.expect(1);
     try {
       const item = new WeakMap();
       asArray(item);
@@ -77,7 +75,6 @@ module('Unit | Utility | as-array', function () {
   });
 
   test('it not works for WeakSet as array', function (assert) {
-    assert.expect(1);
     try {
       const item = new WeakSet();
       asArray(item);

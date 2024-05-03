@@ -15,7 +15,7 @@ module('Integration | Helper | {{find-by}}', function (hooks) {
         { foo: true, name: 'a' },
         { foo: false, name: 'b' },
         { foo: true, name: 'c' },
-      ])
+      ]),
     );
 
     await render(hbs`

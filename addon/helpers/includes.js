@@ -1,4 +1,3 @@
-import { helper } from '@ember/component/helper';
 import asArray from '../utils/as-array';
 
 export function includes(needleOrNeedles, haystack) {
@@ -17,6 +16,4 @@ export function includes(needleOrNeedles, haystack) {
   });
 }
 
-export default helper(function ([needle, haystack]) {
-  return includes(needle, haystack);
-});
+export default includes;

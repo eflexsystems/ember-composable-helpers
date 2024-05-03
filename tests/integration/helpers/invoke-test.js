@@ -40,7 +40,7 @@ module('Integration | Helper | {{invoke}}', function (hooks) {
     this.sumAreas = (x) => {
       this.set(
         'value',
-        x.reduce((a, b) => a + b)
+        x.reduce((a, b) => a + b),
       );
     };
 

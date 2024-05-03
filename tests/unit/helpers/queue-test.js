@@ -26,7 +26,7 @@ module('Unit | Helper | queue', function (hooks) {
   });
 
   test('it queues functions', function (assert) {
-    let queued = queue([step1, step2, step3]);
+    let queued = queue(step1, step2, step3);
     queued(2, 4);
 
     assert.ok(step1.calledOnce, 'step1 called once');
@@ -35,7 +35,7 @@ module('Unit | Helper | queue', function (hooks) {
   });
 
   test('it passes all functions the same arguments', function (assert) {
-    let queued = queue([step1, step2, step3]);
+    let queued = queue(step1, step2, step3);
     queued(2, 4);
 
     assert.ok(step1.calledWith(2, 4), 'step1 called with correct args');
@@ -44,9 +44,8 @@ module('Unit | Helper | queue', function (hooks) {
   });
 
   test('it is promise aware', function (assert) {
-    assert.expect(1);
     let done = assert.async();
-    let queued = queue([step0, step1, step2, step3]);
+    let queued = queue(step0, step1, step2, step3);
     let result = queued(2, 4);
 
     result.then((resolved) => {
@@ -56,9 +55,8 @@ module('Unit | Helper | queue', function (hooks) {
   });
 
   test('it aborts the chain if a promise in the queue rejects', function (assert) {
-    assert.expect(1);
     let done = assert.async();
-    let queued = queue([step0, fail, step1]);
+    let queued = queue(step0, fail, step1);
 
     queued(2, 4)
       .catch(function () {})

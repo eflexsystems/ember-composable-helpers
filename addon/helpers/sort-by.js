@@ -1,6 +1,5 @@
 import { get } from '@ember/object';
 import { isEmpty } from '@ember/utils';
-import { helper } from '@ember/component/helper';
 import asArray from '../utils/as-array';
 
 const collator = new Intl.Collator(undefined, {
@@ -118,11 +117,9 @@ const performSort = (array, keys = []) => {
   });
 };
 
-export function sortBy(params) {
-  // slice params to avoid mutating the provided params
-  const sortParams = params.slice();
-  const array = asArray(sortParams.pop());
-  let sortKeys = sortParams;
+export function sortBy(...params) {
+  const array = asArray(params.pop());
+  let sortKeys = params;
 
   if (!array || !sortKeys || sortKeys.length === 0) {
     return [];
@@ -135,4 +132,4 @@ export function sortBy(params) {
   return performSort(array, sortKeys);
 }
 
-export default helper(sortBy);
+export default sortBy;

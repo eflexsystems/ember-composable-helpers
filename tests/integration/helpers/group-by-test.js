@@ -16,7 +16,7 @@ module('Integration | Helper | {{group-by}}', function (hooks) {
         { category: 'b', name: 'c' },
         { category: 'a', name: 'b' },
         { category: 'b', name: 'd' },
-      ])
+      ]),
     );
 
     await render(hbs`

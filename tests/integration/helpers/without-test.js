@@ -71,7 +71,7 @@ module('Integration | Helper | {{without}}', function (hooks) {
 
     pets.push(
       store.createRecord('pet', { name: 'Kirby' }),
-      store.createRecord('pet', { name: 'Jake' })
+      store.createRecord('pet', { name: 'Jake' }),
     );
 
     store.createRecord('pet', { name: 'Eva' });

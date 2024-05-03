@@ -10,13 +10,12 @@ module('Unit | Helper | invoke', function () {
         return `calling mom in ${[...arguments]}`;
       },
     };
-    let action = invoke(['callMom', 1, 2, 3, object]);
+    let action = invoke('callMom', 1, 2, 3, object);
 
     assert.strictEqual(action(), 'calling mom in 1,2,3', 'it calls functions');
   });
 
   test('it is promise aware', function (assert) {
-    assert.expect(1);
     let done = assert.async();
     let object = {
       func() {
@@ -24,7 +23,7 @@ module('Unit | Helper | invoke', function () {
       },
     };
 
-    let action = invoke(['func', object]);
+    let action = invoke('func', object);
     let result = action();
 
     result.then((resolved) => {
@@ -34,7 +33,6 @@ module('Unit | Helper | invoke', function () {
   });
 
   test('it wraps array of promises in another promise', async function (assert) {
-    assert.expect(1);
     let array = tracked([]);
 
     array.push({
@@ -53,7 +51,7 @@ module('Unit | Helper | invoke', function () {
       },
     });
 
-    let action = invoke(['func', array]);
+    let action = invoke('func', array);
     let result = action();
 
     const resolved = await result;

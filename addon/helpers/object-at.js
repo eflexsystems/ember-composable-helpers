@@ -1,5 +1,3 @@
-import { helper } from '@ember/component/helper';
-
 export function objectAt(index, array) {
   if (!Array.isArray(array)) {
     return undefined;
@@ -10,6 +8,4 @@ export function objectAt(index, array) {
   return array.at(index);
 }
 
-export default helper(function ([index, array]) {
-  return objectAt(index, array);
-});
+export default objectAt;

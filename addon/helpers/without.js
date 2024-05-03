@@ -1,5 +1,3 @@
-import { helper } from '@ember/component/helper';
-
 function contains(needle, haystack) {
   return haystack.includes(needle);
 }
@@ -20,6 +18,4 @@ export function without(needle, haystack) {
   }, []);
 }
 
-export default helper(function ([needle, haystack]) {
-  return without(needle, haystack);
-});
+export default without;
