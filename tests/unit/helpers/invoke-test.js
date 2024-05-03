@@ -16,7 +16,6 @@ module('Unit | Helper | invoke', function () {
   });
 
   test('it is promise aware', function (assert) {
-    assert.expect(1);
     let done = assert.async();
     let object = {
       func() {
@@ -34,7 +33,6 @@ module('Unit | Helper | invoke', function () {
   });
 
   test('it wraps array of promises in another promise', async function (assert) {
-    assert.expect(1);
     let array = tracked([]);
 
     array.push({
