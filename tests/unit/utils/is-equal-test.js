@@ -71,6 +71,6 @@ module('Unit | Utility | is equal', function () {
         let result = isEqual(firstValue, secondValue, useDeepEqual);
         assert.strictEqual(result, expected, `should be ${expected}`);
       });
-    }
+    },
   );
 });

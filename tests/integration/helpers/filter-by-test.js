@@ -15,7 +15,7 @@ module('Integration | Helper | {{filter-by}}', function (hooks) {
         { foo: true, name: 'a' },
         { foo: false, name: 'b' },
         { foo: true, name: 'c' },
-      ])
+      ]),
     );
 
     await render(hbs`
@@ -41,7 +41,7 @@ module('Integration | Helper | {{filter-by}}', function (hooks) {
         { foo: '', name: 'h' },
         { foo: NaN, name: 'i' },
         { foo: [], name: 'j' },
-      ])
+      ]),
     );
 
     await render(hbs`
@@ -149,7 +149,7 @@ module('Integration | Helper | {{filter-by}}', function (hooks) {
         { foo: 1, name: 'a' },
         { foo: 2, name: 'b' },
         { foo: 3, name: 'c' },
-      ])
+      ]),
     );
 
     this.isOdd = (value) => value % 2 === 1;
@@ -176,7 +176,7 @@ module('Integration | Helper | {{filter-by}}', function (hooks) {
         { foo: 1, name: 'a' },
         { foo: 2, name: 'b' },
         { foo: 3, name: 'c' },
-      ])
+      ]),
     );
 
     await render(hbs`
@@ -195,7 +195,7 @@ module('Integration | Helper | {{filter-by}}', function (hooks) {
         { foo: { bar: true }, name: 'a' },
         { foo: { bar: false }, name: 'b' },
         { foo: { bar: true }, name: 'c' },
-      ])
+      ]),
     );
 
     await render(hbs`

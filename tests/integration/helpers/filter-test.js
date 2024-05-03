@@ -16,7 +16,7 @@ module('Integration | Helper | {{filter}}', function (hooks) {
         { foo: 1, name: 'c' },
         { foo: null, name: 'd' },
         { foo: [1, 2, 3], name: 'e' },
-      ])
+      ]),
     );
 
     this.truthyFoo = function ({ foo }) {
@@ -64,7 +64,7 @@ module('Integration | Helper | {{filter}}', function (hooks) {
         { foo: 1, name: 'a' },
         { foo: 2, name: 'b' },
         { foo: 3, name: 'c' },
-      ])
+      ]),
     );
 
     this.isOdd = ({ foo }) => foo % 2 !== 0;
@@ -113,7 +113,7 @@ module('Integration | Helper | {{filter}}', function (hooks) {
     pets.push(
       store.createRecord('pet', { name: 'aa' }),
       store.createRecord('pet', { name: 'ab' }),
-      store.createRecord('pet', { name: 'bc' })
+      store.createRecord('pet', { name: 'bc' }),
     );
 
     this.set('pets', pets);

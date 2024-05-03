@@ -9,7 +9,7 @@ module('Unit | Helper | without', function () {
     assert.deepEqual(
       result,
       expectedResult,
-      'should return the remaining values'
+      'should return the remaining values',
     );
   });
 
@@ -20,7 +20,7 @@ module('Unit | Helper | without', function () {
     assert.deepEqual(
       result,
       expectedResult,
-      'should return the remaining values'
+      'should return the remaining values',
     );
   });
 

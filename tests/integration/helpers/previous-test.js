@@ -65,7 +65,7 @@ module('Integration | Helper | {{previous}}', function (hooks) {
 
     pets.push(
       store.createRecord('pet', { name: 'Kirby' }),
-      store.createRecord('pet', { name: 'Jake' })
+      store.createRecord('pet', { name: 'Jake' }),
     );
 
     this.set('pets', pets);

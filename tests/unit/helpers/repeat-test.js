@@ -9,7 +9,7 @@ module('Unit | Helper | repeat', function () {
     assert.deepEqual(
       result,
       expectedResult,
-      'should return an array of `undefined` values'
+      'should return an array of `undefined` values',
     );
   });
 
@@ -20,7 +20,7 @@ module('Unit | Helper | repeat', function () {
     assert.deepEqual(
       result,
       expectedResult,
-      'should return an array of "foo" values'
+      'should return an array of "foo" values',
     );
   });
 
@@ -31,7 +31,7 @@ module('Unit | Helper | repeat', function () {
     assert.deepEqual(
       result,
       expectedResult,
-      'should return array containing non-number length'
+      'should return array containing non-number length',
     );
   });
 });

@@ -21,7 +21,7 @@ export default function asArray(maybeArray) {
 function _asArray(maybeArray) {
   if (typeof maybeArray === 'number') {
     throw new Error(
-      'Numbers not supported as arrays [ember-composable-helpers]'
+      'Numbers not supported as arrays [ember-composable-helpers]',
     );
   }
   if (typeof maybeArray === 'string') {
@@ -40,17 +40,17 @@ function _asArray(maybeArray) {
     return Array.from(maybeArray.values());
   } else if (maybeArray instanceof WeakMap) {
     throw new Error(
-      'WeakMaps is not supported as arrays [ember-composable-helpers]'
+      'WeakMaps is not supported as arrays [ember-composable-helpers]',
     );
   } else if (maybeArray instanceof WeakSet) {
     throw new Error(
-      'WeakSets is not supported as arrays [ember-composable-helpers]'
+      'WeakSets is not supported as arrays [ember-composable-helpers]',
     );
   }
   if (typeof maybeArray === 'object') {
     if (isPromiseLike(maybeArray)) {
       throw new Error(
-        'Promise-like objects is not supported as arrays [ember-composable-helpers]'
+        'Promise-like objects is not supported as arrays [ember-composable-helpers]',
       );
     }
     return Array.from(Object.values(maybeArray));
@@ -60,7 +60,7 @@ function _asArray(maybeArray) {
   }
   if (!isIterable(maybeArray)) {
     throw new Error(
-      'Argument, passed as array is not iterable [ember-composable-helpers]'
+      'Argument, passed as array is not iterable [ember-composable-helpers]',
     );
   }
   return maybeArray;

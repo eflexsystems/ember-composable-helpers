@@ -55,7 +55,7 @@ module('Integration | Helper | {{shuffle}}', function (hooks) {
     assert.deepEqual(
       this.array,
       [1, 2, 3, 4],
-      'the original array is not shuffled'
+      'the original array is not shuffled',
     );
   });
 

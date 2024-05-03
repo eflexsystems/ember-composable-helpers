@@ -29,7 +29,7 @@ module('Unit | Helper | range', function () {
     assert.deepEqual(
       result,
       expectedResult,
-      'should generate 1 to 5 inclusive'
+      'should generate 1 to 5 inclusive',
     );
   });
 
@@ -40,7 +40,7 @@ module('Unit | Helper | range', function () {
     assert.deepEqual(
       result,
       expectedResult,
-      'should generate 5 to 0 inclusive'
+      'should generate 5 to 0 inclusive',
     );
   });
 });

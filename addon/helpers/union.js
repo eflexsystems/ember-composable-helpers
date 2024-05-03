@@ -5,7 +5,7 @@ export function union([...arrays]) {
   let items = [].concat(...arrays);
 
   return items.filter(
-    (value, index, array) => asArray(array).indexOf(value) === index
+    (value, index, array) => asArray(array).indexOf(value) === index,
   );
 }
 

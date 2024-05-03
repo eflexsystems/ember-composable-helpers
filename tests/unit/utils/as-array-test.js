@@ -61,7 +61,9 @@ module('Unit | Utility | as-array', function () {
       asArray(item);
     } catch (e) {
       assert.ok(
-        e.toString().includes('Promise-like objects is not supported as arrays')
+        e
+          .toString()
+          .includes('Promise-like objects is not supported as arrays'),
       );
     }
   });
