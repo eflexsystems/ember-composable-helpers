@@ -118,7 +118,7 @@ const performSort = (array, keys = []) => {
   });
 };
 
-export function sortBy(params) {
+export function sortBy(...params) {
   // slice params to avoid mutating the provided params
   const sortParams = params.slice();
   const array = asArray(sortParams.pop());
@@ -135,4 +135,4 @@ export function sortBy(params) {
   return performSort(array, sortKeys);
 }
 
-export default helper(sortBy);
+export default sortBy;
